@@ -29,16 +29,18 @@ function	getResult(player, opponent)
 
 (function	startGame()
 {
-	// Initialaize the variable with your choice
+	// Initialaize player's choice
 	const   playerChoice = 'rock';
 
 	if (choiceValid(playerChoice))
 	{
+		// Initialize opponent's choice randomly
 		const   opponentChoice = getRandomChoice();
 
 		console.log(`OPPONENT: ${opponentChoice}`);
 		console.log(`Player: ${playerChoice}`);
 
+		// Get the result about the winner
 		const	result = getResult(playerChoice, opponentChoice);
 
 		if (result == 'Draw')
